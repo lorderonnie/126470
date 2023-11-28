@@ -104,15 +104,15 @@ public class LoginOTP extends AppCompatActivity {
 
     }
 
-//    void setInProgress(boolean inProgress){
-//        if(inProgress){
-//            progressBar.setVisibility(View.VISIBLE);
-//            nextBtn.setVisibility(View.GONE);
-//        }else{
-//            progressBar.setVisibility(View.GONE);
-//            nextBtn.setVisibility(View.VISIBLE);
-//        }
-//    }
+    void setInProgress(boolean inProgress){
+        if(inProgress){
+            progressBar.setVisibility(View.VISIBLE);
+            nextBtn.setVisibility(View.GONE);
+        }else{
+            progressBar.setVisibility(View.GONE);
+            nextBtn.setVisibility(View.VISIBLE);
+        }
+    }
 
     void signIn(PhoneAuthCredential phoneAuthCredential){
         //login and go to next activity
