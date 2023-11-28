@@ -37,7 +37,7 @@ public class LoginOTP extends AppCompatActivity {
     Button nextBtn;
     ProgressBar progressBar;
     TextView resendOtpTextView;
-//    FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseAuth mAuth = FirebaseAuth.getInstance();
 
     @SuppressLint("MissingInflatedId")
     @Override
