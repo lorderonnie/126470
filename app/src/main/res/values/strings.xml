@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">SkinScan</string>
-    <string name="title_activity_phonenumber">Leanback Phonenumber</string>
+    <string name="app_name">BlurPic</string>
+    <string name="title_activity_phonenumber">Phonenumber</string>
     <string name="grid_view">Grid View</string>
     <string name="error_fragment">Error Fragment</string>
     <string name="personal_settings">Personal Settings</string>
