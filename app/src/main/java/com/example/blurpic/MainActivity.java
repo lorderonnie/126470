@@ -6,6 +6,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -51,6 +52,30 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(cameraIntent, 1);
             }
         });
+
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 1 && data != null) { // Gallery
+                try {
+                    // Get the selected image URI and set it to the ImageView
+                    imageView.setImageURI(data.getData());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            } else if (requestCode == 3 && data != null) { // Camera
+                // Get the captured image and set it to the ImageView
+                Bundle extras = data.getExtras();
+                if (extras != null) {
+                    Bitmap imageBitmap = (Bitmap) extras.get("data");
+                    imageView.setImageBitmap(imageBitmap);
+                }
+            }
+        }
+    }
+
 
 }
