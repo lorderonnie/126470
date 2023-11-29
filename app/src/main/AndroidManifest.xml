@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <uses-feature
         android:name="android.hardware.touchscreen"
@@ -10,6 +13,9 @@
     <uses-feature
         android:name="android.software.leanback"
         android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.ACCEPT_HANDOVER,CAMERA" />
 
@@ -25,11 +31,11 @@
         tools:targetApi="34">
         <activity
             android:name=".Registration"
-            android:banner="@drawable/app_icon_your_company"
+            android:banner="@drawable/blur"
             android:exported="true"
-            android:icon="@drawable/app_icon_your_company"
+            android:icon="@drawable/blur"
             android:label="@string/title_activity_phonenumber"
-            android:logo="@drawable/app_icon_your_company"
+            android:logo="@drawable/blur"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
